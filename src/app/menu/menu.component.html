@@ -1,0 +1,7 @@
+<!-- using property binding[] and interpolation{{}} in the following snippet -->
+<ol>
+    <li *ngFor="let eachLink of links">
+        <a [href]=eachLink.link>{{eachLink.linkText}}</a>
+    </li>
+
+</ol>

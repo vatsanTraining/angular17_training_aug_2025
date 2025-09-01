@@ -1,0 +1,7 @@
+ol>li{
+
+    display: inline;
+    font-size: medium;
+    /* TRBL */
+    margin: 10px 10px;   
+}

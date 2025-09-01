@@ -1,0 +1,15 @@
+<ol>
+    <li *ngFor="let eachItem of list">{{eachItem}}</li>
+</ol>
+
+
+<h2>Add More Tasks</h2>
+
+<div>
+    <label>Task</label>
+    <input type="text" id="task" [(ngModel)]="task">
+    <button (click)="update()">Add</button>
+</div>
+
+<h2>To Do List</h2>
+<p>{{message}}</p>

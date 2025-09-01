@@ -1,0 +1,8 @@
+<tr *ngFor="let eachEntry of tableData let idxpos =index">
+    <td>{{eachEntry.orderId}}</td>
+    <td>{{eachEntry.customerName}}</td>
+    <!-- diplay status pending in redcolor and others in green color use ngStyle -->
+    <td [ngStyle]="{'color': eachEntry.status === 'pending' ? 'red' : 'green'}">{{eachEntry.status}}</td>
+    <td><button class="btn btn-danger" (click)="delete($event,idxpos)">Delete</button></td>
+</tr>
+
