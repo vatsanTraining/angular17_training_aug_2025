@@ -1,0 +1,15 @@
+<div>
+    @for(eachPhoto of cphotos;track $index){
+
+    <div [style.display]="'inline'">
+        <!-- <img src={{'assets/images'+'${eachPhoto}''}} alt="some photo"/> -->
+        <!-- <img [src]="eachPhoto" alt="some photo" (click)="send()"> -->
+
+
+        <img [src]="eachPhoto" [ngClass]="{'photoclass':true,'show':true}" alt="some photo" (click)="send(eachPhoto)"
+            [style.margin]="'20px'">
+
+
+    </div>
+    }
+</div>

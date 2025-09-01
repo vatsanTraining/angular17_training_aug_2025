@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-primary">
+    <h2>Demo Code</h2>
+    <img [src]="selctedPicture" alt="profile" [ngStyle]="{'width':'30px','height':'30px',
+        'border':'2px solid gold','border-radius':'10px'}" *ngIf="showProfile">
+
+
+
+</nav>
+<section>
+
+
+    <article [style.backgroudcolor]="'green'">
+        <app-gallery (myevent)="onChange($event)" [cphotos]="pphotos" *ngIf="showGallery"></app-gallery>
+    </article>
+</section>

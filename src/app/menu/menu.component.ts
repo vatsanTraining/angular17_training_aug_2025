@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component,Input } from '@angular/core';
 import { PageLink } from '../page-link';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -21,8 +22,6 @@ export class MenuComponent {
 
 
 ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
   
       console.log('Init called',this.links.length)
 
