@@ -1,21 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Pipe } from '@angular/core';
 import { TableHeadComponent } from '../table-head/table-head.component';
 import { Order } from '../product';
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgStyle, UpperCasePipe } from '@angular/common';
 import { HeaderComponent } from "../header/header.component";
+import { RobPipe } from '../rob.pipe';
+import { FilterPipe } from '../filter.pipe';
+import { LogClass } from '../../utils/ClsDeco';
 
 @Component({
   selector: '[app-table]',
   standalone: true,
-  imports: [NgFor, TableHeadComponent, HeaderComponent, NgStyle],
+  imports: [NgFor,   NgStyle,UpperCasePipe,RobPipe,FilterPipe],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
+@LogClass
 export class TableComponent {
 
   tableData:Order[];
 
   @Input() tableTitle:string =''
+
+  @Input() searchString ='' ;
 
   constructor(){
 
@@ -26,6 +32,13 @@ export class TableComponent {
 {orderId:104,customerName:'rangesh',status:'completed'},
 
     ]
+  }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+    console.log('inside table comp',this.searchString)
   }
 
   delete(event:any,idxPos:number):void{

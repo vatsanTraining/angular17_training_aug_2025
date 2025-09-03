@@ -8,38 +8,33 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<main class="main">
+<main class="main" [ngClass]="'lightBlue'">
 
   <header>
-    <app-header></app-header>
+    <app-header style="display: flex; width: 100%; justify-content: space-around;"></app-header>
   </header>
-  <!-- <section>
-    <header style="height: 20%;">
-      <app-header></app-header>
+  <section>
 
-    </header>
-
+    <label>Search Status</label>
+    <input type="search" name="srchString" [(ngModel)]="srchString">
     <table class="table-bordered table-info table-striped">
 
-      <!-- using attribute selector - observe its not used <selector-name></selector-name> 
-       rather its added as attribute of thead like <thead class=''>-->
-  <!-- <thead app-table-head></thead>
-      <tbody app-table></tbody>
-    </table> -->
+      <thead app-table-head></thead>
+      <tbody app-table [searchString]="srchString"></tbody>
+    </table>
+    <!-- Value:{{srchString}} -->
 
-  <!-- <footer style="height: 20%;">
-      <app-footer></app-footer>
-
-    </footer>
   </section>
+
+  <footer style="height: 20%;">
+    <app-footer></app-footer>
+
+  </footer>
   <section>
     <app-todo></app-todo>
-  </section> -->
+  </section>
 
-  <section>
-    <article>
-      <app-profile></app-profile>
-    </article>
+  <section> -->
   </section>
 
 </main>

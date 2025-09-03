@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { GalleryComponent } from '../gallery/gallery.component';
-import { NgStyle, NgIf, NgClass } from '@angular/common';
+import { NgStyle, NgIf, NgClass, NgFor } from '@angular/common';
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [GalleryComponent, NgStyle, NgIf, NgClass],
+  imports: [GalleryComponent, NgStyle, NgIf, NgClass, NgFor],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
@@ -12,7 +12,7 @@ export class ProfileComponent {
 
   selctedPicture = '';
       
-  pphotos= ["assets/images/first.jpeg","assets/images/second.png","assets/images/logo.png"]
+  photos= ["assets/images/first.jpeg","assets/images/second.png","assets/images/logo.png"]
 showGallery=true ;
 showProfile=false
 onChange(val: string) {

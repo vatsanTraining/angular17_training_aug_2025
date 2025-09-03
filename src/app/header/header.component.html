@@ -1,5 +1,15 @@
-<header style="display: flex; width: 100%;">
+<div>
     <app-logo style="align-items: flex-start;"></app-logo>
+
+</div>
+<div>
     <app-menu style="align-items: flex-end;" [links]="links"></app-menu>
 
-</header>
+</div>
+<div>
+    <app-profile style="align-items: flex-end;"></app-profile>
+
+    <button (click)="invokeDecorated()">Click</button>
+</div>
+
+{{value}}

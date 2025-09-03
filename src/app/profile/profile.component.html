@@ -10,6 +10,7 @@
 
 
     <article [style.backgroudcolor]="'green'">
-        <app-gallery (myevent)="onChange($event)" [cphotos]="pphotos" *ngIf="showGallery"></app-gallery>
+        <app-gallery (myevent)="onChange($event)" [photos]="photos" *ngIf="showGallery">
+        </app-gallery>
     </article>
 </section>
