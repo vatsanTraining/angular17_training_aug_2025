@@ -13,32 +13,13 @@
   <header>
     <app-header style="display: flex; width: 100%; justify-content: space-around;"></app-header>
   </header>
+  
   <section>
-
-    <label>Search Status</label>
-    <input type="search" name="srchString" [(ngModel)]="srchString">
-    <table class="table-bordered table-info table-striped">
-
-      <thead app-table-head></thead>
-      <tbody app-table [searchString]="srchString"></tbody>
-    </table>
-    <!-- Value:{{srchString}} -->
-
+    <router-outlet />
   </section>
 
   <footer style="height: 20%;">
     <app-footer></app-footer>
-
   </footer>
-  <section>
-    <app-todo></app-todo>
-  </section>
-
-  <section> -->
-  </section>
 
 </main>
-
-
-
-<router-outlet />

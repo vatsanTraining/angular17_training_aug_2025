@@ -6,11 +6,12 @@ import { PageLink } from '../page-link';
 import { ProfileComponent } from '../profile/profile.component';
 import { LogClass, LogFactory } from '../../utils/ClsDeco';
 import validate,{Logger} from '../../utils/MethodDeco';
+import { LogoutComponent } from "../logout/logout.component";
 @Component({
   selector: 'app-header',
   standalone: true,
   providers:[MenuService],
-  imports: [LogoComponent,MenuComponent,ProfileComponent],
+  imports: [LogoComponent, MenuComponent, ProfileComponent, LogoutComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -29,7 +30,7 @@ export class HeaderComponent {
     this.service = service;
   }
   
-  @Logger
+  // @Logger
   ngOnInit(): void {
 
     this.links=this.service.getLinks();
@@ -37,13 +38,13 @@ export class HeaderComponent {
   }
 
   @validate("length")
-  sayHello():string{
+  sayHello(name:string):string{
     let response = "bye"
-    this.value = response;
+    this.value = "bye";
     return response
   }
 
   invokeDecorated(){
-    this.value =this.sayHello();
+    this.value =this.sayHello('ramesh');
   }
 }

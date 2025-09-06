@@ -1,0 +1,44 @@
+<form [formGroup]="customerForm" (ngSubmit)="submit()">
+
+    <div>
+        <label for="">Customer Id</label>
+        <input type="text" formControlName="customerId" name="customerId">
+
+        <small [hidden]="!customerForm.controls['customerId'].invalid">
+            required field
+        </small>
+    </div>
+    <div><label for="">Customer Name</label>
+        <input type="text" formControlName="customerName" name="customerName">
+
+        <small [hidden]="customerForm.controls['customerName'].touched">
+            hey you entered it right
+        </small>
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="email" formControlName="email" name="email">
+    </div>
+
+    <div formArrayName="phoneNumbers">
+
+        <div *ngFor="let eachControl of phoneNumbers.controls;let i=index">
+
+            <label>Phone Number {{ i + 1 }}</label>
+            <input type="text" [formControlName]="i" />
+
+
+            <button type="button" (click)="removePhoneNumber(i)">Remove</button>
+            <button type="button" (click)="addPhoneNumer()">Add</button>
+
+        </div>
+
+    </div>
+    <div>
+        <input type="submit" value="Add" [disabled]="!customerForm.valid">
+    </div>
+
+</form>
+
+
+<!-- <p>{{customerForm.value |json}}</p> -->

@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": "101",
+      "productName": "sony tv",
+      "ratePerUnit": "6300",
+      "stock": 70,
+      "imageRef": "../../assets/images/sonytv.jpeg"
+    }
+  ],
+  "customers":[]
+}

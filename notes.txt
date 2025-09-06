@@ -1,0 +1,7 @@
+    this.myArray = this.myArray.map((item, index) => {
+        if (index === 0) {
+            return { ...item, value: 'New A' }; 
+            // Return a new object for the updated item
+        }
+        return item; 
+          });

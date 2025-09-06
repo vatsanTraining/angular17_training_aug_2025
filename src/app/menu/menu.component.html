@@ -1,7 +1,10 @@
 <!-- using property binding[] and interpolation{{}} in the following snippet -->
 <ol>
     <li *ngFor="let eachLink of links">
-        <a [href]=eachLink.link>{{eachLink.linkText}}</a>
+
+        <a [routerLink]=eachLink.link [ngClass]="{show:showthis}">{{eachLink.linkText}}</a>
     </li>
 
 </ol>
+
+<!-- <p [style.font-size]="'1.5em'">{{logstatus}}</p> -->

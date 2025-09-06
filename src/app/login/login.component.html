@@ -1,0 +1,22 @@
+<form (ngSubmit)="submit()" #loginForm="ngForm">
+
+    <div [ngClass]="'form-group'">
+        <label for="">UserName</label>
+        <input type="text" name="userName" [(ngModel)]="user.userName" required="required" [ngClass]="'form-control'"
+            autocomplete #name="ngModel">
+
+    </div>
+    <div [ngClass]="'form-group'">
+        <label for="">PassWord</label>
+        <input type="password" name="password" [(ngModel)]="user.password" required="required"
+            [ngClass]="'form-control'">
+
+    </div>
+
+    <div>
+        <input type="submit" value="Login" [disabled]="loginForm.invalid">
+        <input type="reset" (click)="reset()">
+    </div>
+</form>
+
+<!-- {{user|json}} -->

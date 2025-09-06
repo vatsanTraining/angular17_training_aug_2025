@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { NgStyle, NgIf, NgClass, NgFor } from '@angular/common';
+import { LogoutComponent } from '../logout/logout.component';
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [GalleryComponent, NgStyle, NgIf, NgClass, NgFor],
+  imports: [GalleryComponent, NgStyle, NgIf, NgClass, NgFor,LogoutComponent],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })

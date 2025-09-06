@@ -1,0 +1,18 @@
+<div class="row">
+
+    <div *ngFor="let eachItem of list " class="row" class="col-sm-4 mb-3 mb-sm-0">
+
+        <div class="card" style="width: 18rem; height: 28rem; margin-bottom: 20px;">
+            <img [src]="eachItem.imageRef" class="card-img-top" alt="image">
+            <div class="card-body">
+                <h5 class="card-title">{{eachItem.productName}}</h5>
+                <p class="card-text">{{eachItem.ratePerUnit}}</p>
+                <a [routerLink]="'details'" class="btn btn-primary">View Details</a>
+                <button class="btn btn-danger" (click)="delete(eachItem)">Delete</button>
+                <button class="btn btn-info" (click)="update(eachItem)">Edit</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>

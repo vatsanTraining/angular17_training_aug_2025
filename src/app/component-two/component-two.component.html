@@ -1,0 +1,8 @@
+<h1>Component Two</h1>
+
+<p [style.color]="'orange'">{{value}}</p>
+
+
+<label>Enter Text</label>
+<input type="text" name="message'" [(ngModel)]="value">
+<button (click)="change(value)">Change</button>

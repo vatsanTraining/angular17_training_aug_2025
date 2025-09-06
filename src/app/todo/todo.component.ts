@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,10 +13,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class TodoComponent {
 
-  message :string;
-
-  constructor(){
-    this.message = '';
+  newtask :string;
+  message:string =''
+  constructor(activeRoute:ActivatedRoute){
+   this.newtask =  activeRoute.snapshot.params['task'];
+   this.list.push(this.newtask)
   }
 
   task =''

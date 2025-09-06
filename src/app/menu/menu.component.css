@@ -5,3 +5,13 @@ ol>li{
     /* TRBL */
     margin: 10px 10px;   
 }
+
+.show{
+
+    display: inline;
+    text-decoration: none;
+}
+
+.hide{
+    display: none;
+}

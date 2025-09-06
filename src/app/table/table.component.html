@@ -1,4 +1,5 @@
-<tr *ngFor="let eachEntry of tableData | filter:'status':searchString let idxpos =index">
+<tr *ngFor="let eachEntry of tableData | filter:'status'
+    :searchString let idxpos =index" appHighlight="1.4em">
     <td>{{eachEntry.orderId}}</td>
     <td>{{eachEntry.customerName | uppercase}}</td>
     <!-- diplay status pending in redcolor and others in green color use ngStyle -->

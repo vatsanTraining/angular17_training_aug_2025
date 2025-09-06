@@ -1,6 +1,6 @@
 export interface Product {
 
-    productId:number;productName:string,ratePerUnit:number,stock?:number;
+    id:number,productId:number;productName:string,ratePerUnit:number,stock?:number,imageRef:string;
 }
 
 export interface Order{

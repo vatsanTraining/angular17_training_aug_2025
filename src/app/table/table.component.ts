@@ -6,15 +6,16 @@ import { HeaderComponent } from "../header/header.component";
 import { RobPipe } from '../rob.pipe';
 import { FilterPipe } from '../filter.pipe';
 import { LogClass } from '../../utils/ClsDeco';
+import { HighlightDirective } from "../highlight.directive";
 
 @Component({
   selector: '[app-table]',
   standalone: true,
-  imports: [NgFor,   NgStyle,UpperCasePipe,RobPipe,FilterPipe],
+  imports: [NgFor, NgStyle, UpperCasePipe, RobPipe, FilterPipe, HighlightDirective],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
-@LogClass
+// @LogClass
 export class TableComponent {
 
   tableData:Order[];

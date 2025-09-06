@@ -1,0 +1,31 @@
+<form (ngSubmit)="submit()" [formGroup]="productForm">
+    <div [ngClass]="'form-group'">
+        <label for="" class="col-form-label-sm">Product Id</label>
+        <input type="text" formControlName="id" name="id" required [ngClass]="'form-control-sm'">
+    </div>
+    <div [ngClass]="'form-group'">
+        <label for="" class="col-form-label-sm">Product Name</label>
+        <input type="text" formControlName="productName" name="productName" [ngClass]="'form-control-sm'">
+    </div>
+    <div [ngClass]="'form-group'">
+        <label for="">Rate Per Unit</label>
+        <input type="text" formControlName="ratePerUnit" name="ratePerUnit" [ngClass]="'form-control-sm'">
+    </div>
+    <div [ngClass]="'form-group'">
+        <label for="">Stock</label>
+        <input type="text" formControlName="stock" name="stock" [ngClass]="'form-control-sm'">
+    </div>
+    <div [ngClass]="'form-group'">
+        <label for="">Image Reference</label>
+        <input type="text" formControlName="imageRef" name="imageRef" [ngClass]="'form-control-sm'">
+    </div>
+    <div>
+
+        <input type="reset" value="Reset">
+        <input type="submit" [value]="btnText">
+    </div>
+
+</form>
+
+<app-product [list]="list" (itemToDelete)="remove($event)" (itemToUpdate)="edit($event)"></app-product>
+{{productForm.value|json}}

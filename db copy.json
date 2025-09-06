@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "101",
+      "productName": "sony tv",
+      "ratePerUnit": 5600,
+      "stock": 70,
+      "imageRef": "../../assets/images/sonytv.jpeg"
+    },
+    {
+      "productName": "Dell Laptop ",
+      "ratePerUnit": 7600,
+      "stock": 20,
+      "imageRef": "../../assets/images/dell.jpeg",
+      "id": "102"
+    },
+    {
+      "productName": "Washing Machine",
+      "ratePerUnit": 7600,
+      "stock": 40,
+      "imageRef": "../../assets/images/washingmachine.jpeg",
+      "id": "103"
+    },
+    {
+      "id": "104",
+      "productName": "Mouse pad",
+      "ratePerUnit": "560",
+      "stock": "23",
+      "imageRef": "../assets/images/dell.jpeg"
+    },
+    {
+      "id": "0d10500",
+      "productId": "766",
+      "productName": "Fridge",
+      "ratePerUnit": "49999",
+      "stock": "23",
+      "imageRef": "../assets/images/dell.jpeg"
+    }
+  ]
+}

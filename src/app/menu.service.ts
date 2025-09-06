@@ -14,7 +14,12 @@ export class MenuService {
                 {link:"home",linkText:"Home"},
                 {link:"products",linkText:"Products"},
                 {link:"orders",linkText:"Orders"},
-                {link:"contact",linkText:"Contact"}
+                {link:"todo",linkText:"Contact"},
+                {link:"customer",linkText:"Customer"},
+                {link:"login",linkText:"Login"},
+                {link:"logout",linkText:"Logout"},
+
+
     ]
 
    }
