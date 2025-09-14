@@ -36,6 +36,7 @@ export class LoginComponent {
      if(this.user.userName==='india' && this.user.password==='delhi'){
          console.log('valid user')
          this.service.changeLoginStatus(true)
+        localStorage.setItem('token','abcd1234')
      } else {
         console.log('invalid credentials')
      }

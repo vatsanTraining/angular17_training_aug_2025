@@ -21,7 +21,10 @@ export const routes: Routes = [
 {path:'login',component:LoginComponent},
 {path:'customer',component:CustomerComponent},
 {path:'logout',component:LogoutComponent},
+{path:'reviews',loadComponent:async ()=>{const m = await import('./review/review.component');
+return m.ReviewComponent;}},
 {path:'**',component:NotfoundComponent}
+
 
 ];
 

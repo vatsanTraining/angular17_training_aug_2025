@@ -1,7 +1,5 @@
-    this.myArray = this.myArray.map((item, index) => {
-        if (index === 0) {
-            return { ...item, value: 'New A' }; 
-            // Return a new object for the updated item
-        }
-        return item; 
-          });
+docker build -t my-angular-app .
+    docker run -d my-angular-app -p 8080:4000
+
+
+

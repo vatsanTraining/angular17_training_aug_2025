@@ -1,0 +1,11 @@
+<div *ngFor="let review of reviews$ | async">
+    <h3>{{review.reviewedBy}}</h3>
+    <p>Reviwed by:{{review.productReviewed}}</p>
+    <p *ngFor="let eachItem of review.reviews">
+        {{eachItem}}
+    </p>
+    <p>Rating {{review.rating}}/{{'5'}}</p>
+    <app-buttonpanel [loveCount]="loveCount$" [likeCount]="likeCount$"></app-buttonpanel>
+        <hr>
+
+</div>

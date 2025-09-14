@@ -18,6 +18,7 @@ export class MenuService {
                 {link:"customer",linkText:"Customer"},
                 {link:"login",linkText:"Login"},
                 {link:"logout",linkText:"Logout"},
+                {link:"reviews",linkText:"Reviews"}
 
 
     ]

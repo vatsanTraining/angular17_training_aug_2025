@@ -10,7 +10,9 @@ export class ProductService {
 
   
 
-  baseUrl = "http://localhost:3000/products"
+  //baseUrl = "http://localhost:3000/products"
+
+  baseUrl = "../assets/products.json"
   constructor(private http:HttpClient) { }
 
   findAll():Observable<Product[]>{
