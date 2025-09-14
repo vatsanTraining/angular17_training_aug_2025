@@ -23,7 +23,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Styling
 
-Bootstrap CSS is added to the package Json 
+Bootstrap CSS is added to the project 
 Those who clone the project can add Styling to thier choice
 If time permits I will enhance the styling and update the repoisotry
 
