@@ -9,7 +9,7 @@ The Major Concepts in this Demo are the  following
 3) Custom Pipes
 4) Services with HttpClient and Interceptors
 5) NgRx State Management with Reducers and Services with Effects
-6) Routing
+6) Routing with Guards
 7) Template and Reactive Forms
 8) Typescript Custom Decorators
 9) Dcokerfile to Deploy to ngInx Server
